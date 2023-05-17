@@ -1,12 +1,12 @@
-import * as salaryService from "./services/salary-service.js";
-import Employee from "./models/employee.js";
+import Employee from './models /employee.js';
+import * as salariService from './services/salary-service.js';
 
-const data = document.getElementById("grossSalaryInput").innerHTML.split("\n");
+const data = document.getElementById("grossSalaryInput").innerHTML.split("/n");
 
 const employee = new Employee(data[0], Number(data[1]));
 
-const netSalary = salaryService.netSalary(employee);
+const netSalary = salariService.netsalary(employee);
 
 console.log(`Funcionário = ${employee.name}`);
-console.log(`Salario bruto = ${employee.grossSalary.toFixed(2)}`);
-console.log(`Salario líquido = ${netSalary.toFixed(2)}`);
+console.log(`Salário bruto = ${employee.grossSalary.toFixed(2)}`);
+console.log(`Salário líquido = ${netSalary.toFixed(2)}`);

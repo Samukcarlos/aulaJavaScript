@@ -1,5 +1,5 @@
-import * as taxService from './tax-service';
-import * as pensionService from './pension-service';
+import * as taxService from './tax-service.js';
+import * as pensionService from './pension-service.js';
 
 export function netsalary(employee){
     const tax = taxService.tax(employee.grossSalary);
@@ -7,3 +7,4 @@ export function netsalary(employee){
 
     return employee.grossSalary - tax - pension;
 }
+
